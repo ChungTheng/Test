@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payslip</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Merriweather", serif;
+      background-color: #ccc;
+      padding: 20px;
+    }
+    .paper {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 { font-size: 22px; margin-bottom: 5px; }
+    .header p { font-size: 14px; }
+    #payslipform {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    fieldset { border: none; padding: 0; }
+    .front-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .front-row label { min-width: 120px; font-weight: bold; }
+    .front-row span { margin: 0 5px; }
+    .front-row input {
+      border: none;
+      background: transparent;
+      flex: 1;
+      font-size: 13px;
+    }
+    .payslip-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th { background: #f4f4f4; text-align: left; }
+    td:last-child { text-align: right; }
+    .totals td { font-weight: bold; }
+    .netpay td { border-top: 1px solid #ddd; }
+    .amount-text {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .signatures p { text-align: center; font-size: 13px; }
+    .system-note {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="paper">
+    <div class="header">
+      <h1>Payslip</h1>
+      <p>Zoonodle Inc</p>
+      <p>21023 Pearson Point Road Gateway Avenue</p>
+    </div>
+
+    <form id="payslipform">
+      <fieldset>
+        <div class="front-row"><label>Date Of Joining</label><span>:</span><input type="text" value="2026-02-2"></div>
+        <div class="front-row"><label>Pay Period</label><span>:</span><input type="text" value="August 2021"></div>
+        <div class="front-row"><label>Worked Days</label><span>:</span><input type="text" value="26"></div>
+      </fieldset>
+      <fieldset>
+        <div class="front-row"><label>Employee Name</label><span>:</span><input type="text" value="John Doe"></div>
+        <div class="front-row"><label>Employee ID</label><span>:</span><input type="text" value="EMP12345"></div>
+        <div class="front-row"><label>Department</label><span>:</span><input type="text" value="Marketing"></div>
+      </fieldset>
+    </form>
+
+    <table class="payslip-table">
+      <tr>
+        <th>Earnings</th><th>Amount</th><th>Deductions</th><th>Amount</th>
+      </tr>
+      <tr><td>Basic</td><td>$10000</td><td>Tax</td><td>$300</td></tr>
+      <tr><td>Incentive pay</td><td>$3000</td><td>Tax</td><td>$300</td></tr>
+      <tr><td>Basic Salary</td><td>$3000</td><td>Tax</td><td>$300</td></tr>
+      <tr><td>Basic Salary</td><td>$3000</td><td>Tax</td><td>$300</td></tr>
+      <tr class="totals"><td>Total Earnings</td><td>$16000</td><td>Total Deductions</td><td>$900</td></tr>
+      <tr class="netpay"><td></td><td></td><td>Net Pay</td><td>$15100</td></tr>
+    </table>
+
+    <div class="amount-text">
+      <p>9500</p>
+      <p>Nine Thousand Five Hundred</p>
+    </div>
+
+    <div class="signatures">
+      <div><p style="margin-bottom:60px;">Authorized Signature</p><p>_______________________</p></div>
+      <div><p style="margin-bottom:60px;">Authorized Signature</p><p>_______________________</p></div>
+    </div>
+
+    <p class="system-note">This is system generated payslip</p>
+  </div>
+</body>
+</html>

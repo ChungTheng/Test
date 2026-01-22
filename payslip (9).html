@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Slabo+27px&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+      font-family: "Merriweather", serif;
+      background-color: gray;
+    }
+    .paper{
+        max-width: 900px;
+        width: 100%;
+        overflow-x: hidden;
+        margin: auto;
+        background-color: white;
+        padding:20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header{
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    p{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    #payslipform{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    fieldset{
+        border: none;
+        padding: 20px;
+
+    }
+    .front-row{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .front-row span{
+        font-weight: bold;
+    }
+    .front-row input{
+        flex: 1;
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+    }
+    .front-row label{
+        min-width: 150px;
+        font-size: 14px;
+    }
+    .payslip-table{
+        width: 90%;
+        margin-left: 20px;
+        border-collapse: collapse;
+        margin-top: 20px;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+    
+    th{
+        border: 1px solid #ddd;
+        padding: 10px;
+        background-color: #f4f4f4;
+        text-align: left;
+    }
+    td{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 0px solid #ddd;
+        border-top: 0px solid #ddd;
+        padding: 10px;
+    }
+ .left{
+    text-align: center;
+    background-color: #f4f4f4;
+    
+ }
+    .right{
+        text-align: center;
+        background-color: #f4f4f4;
+       
+    }
+</style>
+<body>
+    <div class="paper">
+        <div class="header">
+            <h1>Payslip</h1>
+            <p>Zoonodle Inc</p>
+            <p>21023 Pearson Point Road Gateway Avenue</p>
+        </div>
+
+        <div>
+            <form action="" id="payslipform">
+                <fieldset>
+                 <div class="front-row">
+                    <label for="">Date Of Joining</label>
+                    <span > :</span>
+                    <input type="text" name="" value="2026-02-2"><br>
+                 </div>
+                  <div class="front-row">
+                   <label for="">Pay Period</label>
+                   <span>:</span>
+                    <input type="text" name="" value="August 2021"><br>
+                 </div>
+                  <div class="front-row">
+                    <label for="">Worked Days</label>
+                    <span > :</span>
+                    <input type="text" name="" value="26"><br>
+                 </div>
+                </fieldset>
+                <fieldset>
+                    <div class="front-row">
+                        <label for="">Employee Name</label>
+                        <span > :</span>
+                        <input type="text" name="" value="John Doe"><br>
+                     </div>
+                    <div class="front-row">
+                     <label for="">Employee ID</label>
+                     <span>:</span>
+                        <input type="text" name="" value="EMP12345"><br>
+                     </div>
+                    <div class="front-row">
+                        <label for="">Department</label>
+                        <span > :</span>
+                        <input type="text" name="" value="Marketing"><br>
+                     </div>
+                </fieldset>
+            </form>
+            <table class="payslip-table">
+                <tr>
+                    <th>Earnings</th>
+                    <th>Amount</th>
+                    <th>Deductions</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>Basic</td>
+                    <td>$10000</td>
+                    <td>Tax</td>
+                    <td style="text-align: right;">$300</td>
+                </tr>
+                  <tr>
+                    <td>Incentive pay</td>
+                    <td>$3000</td>
+                    <td>Tax</td>
+                    <td style="text-align: right;">$300</td>
+                </tr>
+                  <tr>
+                    <td>Basic Salary</td>
+                    <td>$3000</td>
+                    <td>Tax</td>
+                    <td style="text-align: right;">$300</td>
+                </tr>
+                  <tr>
+                    <td>Basic Salary</td>
+                    <td>$3000</td>
+                    <td>Tax</td>
+                    <td style="text-align: right;">$300</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr style="text-align: right;">
+                    <td><strong>Total Earnings</strong></td>
+                    <td><strong>$16000</strong></td>
+                    <td><strong>Total Deductions</strong></td>
+                    <td><strong>$900</strong></td>
+                </tr>
+                <tr style="text-align: right; border-bottom: 1px solid #ddd;">
+                    <td></td>
+                    <td></td>
+                    <td>Net Pay</td>
+                    <td>$15100</td>
+                </tr>
+            </table>
+            <div style="text-align: center; margin-top: 30px;">
+                <p>9500</p>
+                <p>Nine Thousand Five Hundred</p>
+            </div>
+
+            <div style="display: grid; align-items: center;
+            grid-template-columns: 1fr 1fr; margin: 50px auto; gap: 150px; width: 80% ;">
+              
+            <div class="left"  >
+                     <p style="margin-bottom: 100px; font-size: 12px ;">Authorized Signature</p>
+                    <p>____________________</p>
+                   
+            </div>
+                <div class="right ">
+                    <p style="margin-bottom: 100px; font-size: 12px ;">Authorized Signature</p>
+                    <p>____________________</p>
+            </div>
+        </div>
+
+         <p style="text-align: center; margin-top: 20px; margin-bottom: 30px;">This is system generated payslip</p>
+    </div>
+</body>
+
+</html>
